@@ -18,21 +18,11 @@ Real-time AI analysis of domain age, HTTPS status, redirects, VirusTotal flags, 
 Multi-language AI output - Gemini responds in English, Arabic, or Kurdish (Badini) based on your UI selection
 Intelligent safety recommendations tailored to the actual threat profile
 Zero-cost setup using Google's free Gemini API tier
+
 2. Complete Kurdish (Badini - Duhok) Dictionary
 Full, verified Kurdish translations for the entire UI using the Badini dialect with Arabic script:
-```
-'پێڕستا سەرەکی' (Main Menu)
-'پشکنینا کویر بۆ بەستەری (URL)' (Deep Scan)
-'مێژووا پشکنینان' (Scan History)
-'رێکخستنێن زمان' (Language Settings)
-'شیکارکرنا زیرەکییا دەستکرد (AI Analysis)' (AI Analysis)
-'هۆکارێ مەترسیێ (شیکارکرنا ژیری)' (Threat Reasoning)
-'مەترسیدار' (Danger/Malicious)
-'گومانلێکراو' (Suspicious)
-'پاراستی (ئارام)' (Safe)
-'سوپاس بۆ بکارئینانا ئامرازێ مە. ب خاترێ تە!' (Goodbye)
-```
-5. Enhanced VirusTotal API v3 Multi-Key Rotation
+
+3. Enhanced VirusTotal API v3 Multi-Key Rotation
 Supports up to 5 API keys with automatic rotation on rate-limit (429) or invalid key (401/403)
 Graceful degradation when all keys are exhausted
 Detailed per-vendor malicious flag reporting in the terminal
