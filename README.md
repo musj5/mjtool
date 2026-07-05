@@ -18,21 +18,7 @@ Real-time AI analysis of domain age, HTTPS status, redirects, VirusTotal flags, 
 Multi-language AI output - Gemini responds in English, Arabic, or Kurdish (Badini) based on your UI selection
 Intelligent safety recommendations tailored to the actual threat profile
 Zero-cost setup using Google's free Gemini API tier
-2. Logic-Based Risk Scoring (Fixed Critical Bug)
-The previous v2.3 used blind mathematics that could label URLs with actual malware as "Safe". v2.6 introduces priority logic:
-Condition	Score	Verdict
-`malicious\_count > 0` (VirusTotal)	90-100	CRITICAL/DANGEROUS
-`suspicious\_count > 0` (no malicious)	70-85	HIGH/SUSPICIOUS
-Clean VirusTotal + other indicators	0-69	Variable
-Critical Rule: A URL with even ONE malicious flag on VirusTotal is NEVER classified as "Safe".
-3. Fixed RTL Text Rendering
-The v2.3 `render\_rtl` function failed when English words (like "VirusTotal", "URL", numbers) were concatenated with Arabic/Kurdish strings, causing reversed and disconnected output.
-v2.6 Fix:
-`arabic\_reshaper.reshape()` + `bidi.algorithm.get\_display()` are applied ONLY to pure Arabic/Kurdish text chunks
-Processing happens BEFORE injection into f-strings with English variables and ANSI color codes
-Live Gemini AI output in Arabic/Kurdish is also passed through the corrected RTL pipeline
-Perfect right-to-left flow in the terminal without breaking formatting
-4. Complete Kurdish (Badini - Duhok) Dictionary
+2. Complete Kurdish (Badini - Duhok) Dictionary
 Full, verified Kurdish translations for the entire UI using the Badini dialect with Arabic script:
 ```
 'پێڕستا سەرەکی' (Main Menu)
